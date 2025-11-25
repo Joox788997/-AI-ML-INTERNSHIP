@@ -37,20 +37,16 @@ Build and evaluate tree-based models (Decision Tree and Random Forest) for a bin
 | 6 | Visualize and constrain tree depth to prevent overfitting |
 | 7 | Train Random Forest and evaluate |
 | 8 | Plot feature importances |
-| 9 | Cross-validation for robust accuracy estimate |
-| 10 | Save models & predictions |
-
----
-
-## Evaluation Summary
-| Model | Test Accuracy | CV Mean (5-fold) |
-|-------|---------------|------------------|
-| Decision Tree (best depth) | see notebook | see notebook |
-| Random Forest | see notebook | see notebook |
-
-> Detailed classification reports and confusion matrices are provided inside the notebook.
-
----
 
 
+| File name                      | Purpose / Description                                                                                                                                                                  |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `task5.ipynb`                  | Jupyter Notebook with the full pipeline: loading data, preprocessing, Decision Tree and Random Forest training, visualization, cross-validation, evaluation, and saving outputs.       |
+| `StudentsPerformance.csv`      | Dataset used for the task. Local path: `/mnt/data/StudentsPerformance.csv`. (Use this file as the dataset source when running the notebook.)                                           |
+| `task5_random_forest.pkl`      | Serialized Random Forest model (saved with `joblib.dump`). Optional but recommended to include for reproducibility.                                                                    |
+| `task5_decision_tree_best.pkl` | Serialized Decision Tree model with the selected `max_depth`.                                                                                                                          |
+| `task5_predictions.csv`        | CSV with test set ground truth and predictions (columns: `y_true`, `pred_rf`, `pred_tree`).                                                                                            |
+| `README.md`                    | Project documentation: objectives, steps, results, how to run, and brief answers to interview questions.                                                                               |
+| `plots/` (folder)              | Optional folder containing exported plot images: `confusion_matrix.png`, `roc_curve.png`, `feature_importance.png`, `tree_plot.png`. (Include if you export images from the notebook.) |
+| `requirements.txt`             | (optional) Exact Python packages and versions used, e.g.: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, `joblib`.                                                        |
 
